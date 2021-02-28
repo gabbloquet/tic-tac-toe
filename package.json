@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:behaviour": "cucumber-js",
+    "cypress:open": "cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,6 +42,11 @@
     ]
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^7.0.0"
+    "@cucumber/cucumber": "^7.0.0",
+    "cypress": "^6.5.0",
+    "cypress-cucumber-preprocessor": "^4.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
