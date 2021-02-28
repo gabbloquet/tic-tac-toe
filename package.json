@@ -26,7 +26,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:cypress/recommended"
     ]
   },
   "browserslist": {
@@ -44,7 +45,8 @@
   "devDependencies": {
     "@cucumber/cucumber": "^7.0.0",
     "cypress": "^6.5.0",
-    "cypress-cucumber-preprocessor": "^4.0.1"
+    "cypress-cucumber-preprocessor": "^4.0.1",
+    "eslint-plugin-cypress": "^2.11.2"
   },
   "cypress-cucumber-preprocessor": {
     "cucumberJson": {
