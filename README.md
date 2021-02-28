@@ -1,8 +1,16 @@
-# Getting Started with Create React App
+# Tic tac toe 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tic tac toe game, training to try to set up the practical crafts in a front-end project.
 
-## Available Scripts
+## Technical choices
+
+- React
+- Typescript (Developer experience, shift left)
+- Cypress (End to end testing)
+- Cucumber (Gherkin syntax for Behaviour driven development & Acceptance testing)
+- Jest (Unit testing when needed)
+
+## Available Scripts with React
 
 In the project directory, you can run:
 
