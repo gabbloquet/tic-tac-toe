@@ -1,4 +1,4 @@
-const calculateStatus = (winner: String, squares: Array<String>, nextValue: String) => {
+const calculateStatus = (winner: String | null, squares: Array<String>, nextValue: String) => {
   return winner
     ? `Winner: ${winner}`
     : squares.every(Boolean)

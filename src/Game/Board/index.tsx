@@ -2,15 +2,15 @@ import React from "react";
 import './Board.css'
 
 interface BoardProps {
-  squares: Array<String>,
+  squares: {[index:number] : String},
   onClick: Function
 }
 
-const Board = ({squares, onClick}: BoardProps) => {
-  function renderSquare(i: Number) {
+  const Board = ({squares, onClick}: BoardProps) => {
+  function renderSquare(id: number) {
     return (
-      <button className="square" onClick={() => onClick(i)}>
-        {squares[i]}
+      <button className="square" onClick={() => onClick(id)}>
+        {squares[id]}
       </button>
     )
   }
