@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 /**
  *
@@ -7,31 +7,29 @@ import React from 'react'
  * @param {{serialize: Function, deserialize: Function}} options The serialize and deserialize functions to use (defaults to JSON.stringify and JSON.parse respectively)
  */
 
-function useLocalStorageState(
-  key: string,
-  defaultValue: any,
-  {serialize = JSON.stringify, deserialize = JSON.parse} = {},
+function useLocalStorageState( key: string, defaultValue: any,
+	{ serialize = JSON.stringify, deserialize = JSON.parse } = {},
 ) {
-  const [state, setState] = React.useState(() => {
-    const valueInLocalStorage = window.localStorage.getItem(key)
-    if (valueInLocalStorage) {
-      return deserialize(valueInLocalStorage)
-    }
-    return typeof defaultValue === 'function' ? defaultValue() : defaultValue
-  })
+	const [state, setState] = React.useState(() => {
+		const valueInLocalStorage = window.localStorage.getItem(key);
+		if (valueInLocalStorage) {
+			return deserialize(valueInLocalStorage);
+		}
+		return typeof defaultValue === 'function' ? defaultValue() : defaultValue;
+	});
 
-  const prevKeyRef = React.useRef(key)
+	const prevKeyRef = React.useRef(key);
 
-  React.useEffect(() => {
-    const prevKey = prevKeyRef.current
-    if (prevKey !== key) {
-      window.localStorage.removeItem(prevKey)
-    }
-    prevKeyRef.current = key
-    window.localStorage.setItem(key, serialize(state))
-  }, [key, state, serialize])
+	React.useEffect(() => {
+		const prevKey = prevKeyRef.current;
+		if (prevKey !== key) {
+			window.localStorage.removeItem(prevKey);
+		}
+		prevKeyRef.current = key;
+		window.localStorage.setItem(key, serialize(state));
+	}, [key, state, serialize]);
 
-  return [state, setState]
+	return [state, setState];
 }
 
-export {useLocalStorageState}
+export { useLocalStorageState };

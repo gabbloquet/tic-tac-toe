@@ -1,0 +1,7 @@
+# Ignore artifacts:
+.husky
+.idea
+node_modules
+public
+build
+coverage

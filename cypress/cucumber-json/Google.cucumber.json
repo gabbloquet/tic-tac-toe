@@ -1,0 +1,58 @@
+[
+  {
+    "description": "  I want to make a reasearch and have at least a result.",
+    "keyword": "Feature",
+    "name": "Find something",
+    "line": 1,
+    "id": "find-something",
+    "tags": [],
+    "uri": "Google.feature",
+    "elements": [
+      {
+        "id": "find-something;opening-a-search-engine-page",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Opening a search engine page",
+        "tags": [
+          {
+            "name": "@focus",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open Google page",
+            "result": {
+              "status": "passed",
+              "duration": 1200000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I search toto",
+            "result": {
+              "status": "failed",
+              "duration": 4078000000,
+              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[type=search]`, but never found it.\n    at Context.eval (https://www.google.com/__cypress/tests?p=cypress/integration/Google.feature:44:6)\n    at Context.resolveAndRunStepDefinition (https://www.google.com/__cypress/tests?p=cypress/integration/Google.feature:8143:9)\n    at Context.eval (https://www.google.com/__cypress/tests?p=cypress/integration/Google.feature:7484:35)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I find www.toto.fr website",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

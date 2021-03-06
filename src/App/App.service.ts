@@ -8,12 +8,12 @@ type AppState = {
 }
 
 export const appInitialState = {
-  status: GameStatus.INIT
+	status: GameStatus.INIT
 }
 
-export const AppReducer = (state: AppState, action: String) => {
-  switch (action) {
-    default:
-      return state;
-  }
+export const AppReducer = (state: AppState, action: string) => {
+	switch (action) {
+	default:
+		return state;
+	}
 }
