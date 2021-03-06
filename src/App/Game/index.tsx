@@ -5,7 +5,7 @@ import Board from "./Board";
 import './Game.css';
 
 function Game() {
-  const [history, setHistory] = useLocalStorageState('tic-tac-toe:history', JSON.stringify(Array(9).fill(null)))
+  const [history, setHistory] = useLocalStorageState('tic-tac-toe:history', [Array(9).fill(null)])
   const [currentStep, setCurrentStep] = useLocalStorageState('tic-tac-toe:step', '0',)
 
   const currentSquares = history[currentStep]
