@@ -9,7 +9,7 @@ type InputType = {
   args: Record<string, unknown>
 }
 
-const Input = ({id, label, name, placeholder, type, ...args}: InputType) => {
+const Input = ({id, label, name, placeholder, type, ...args}: InputType): JSX.Element => {
 	return (
 		<label className="input-component" htmlFor={id}>
 			{label}

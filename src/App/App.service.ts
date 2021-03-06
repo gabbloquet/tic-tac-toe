@@ -11,7 +11,7 @@ export const appInitialState = {
 	status: GameStatus.INIT
 }
 
-export const AppReducer = (state: AppState, action: string) => {
+export const AppReducer = (state: AppState, action: string): AppState => {
 	switch (action) {
 	default:
 		return state;

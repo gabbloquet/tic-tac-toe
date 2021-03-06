@@ -1,12 +1,11 @@
-import React from 'react'
-import {useLocalStorageState} from '../../utils'
+import React, { useState } from "react";
 import {calculateNextValue, calculateStatus, calculateWinner} from './Game.service';
 import Board from './Board';
 import './Game.css';
 
-function Game() {
-	const [history, setHistory] = useLocalStorageState('tic-tac-toe:history', [Array(9).fill(null)])
-	const [currentStep, setCurrentStep] = useLocalStorageState('tic-tac-toe:step', '0',)
+function Game(): JSX.Element {
+	const [history, setHistory] = useState([Array(9).fill(null)])
+	const [currentStep, setCurrentStep] = useState<number>(0)
 
 	const currentSquares = history[currentStep]
 	const winner = calculateWinner(currentSquares)
@@ -31,7 +30,7 @@ function Game() {
 		setCurrentStep(0)
 	}
 
-	const moves = history.map((stepSquares: any, step: number) => {
+	const moves = history.map((stepSquares: Array<string>, step: number) => {
 		const desc = step ? `Go to move #${step}` : 'Go to game start'
 		const isCurrentStep = step === currentStep
 		return (

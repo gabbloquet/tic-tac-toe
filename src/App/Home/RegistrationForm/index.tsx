@@ -6,7 +6,7 @@ type RegistrationFormType = {
   userTwoUsername: string,
 };
 
-const RegistrationForm = () => {
+const RegistrationForm = (): JSX.Element => {
 
 	const { register, handleSubmit, errors } = useForm<RegistrationFormType>();
 	const onSubmit = (data: RegistrationFormType) => {

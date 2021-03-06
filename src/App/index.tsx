@@ -5,7 +5,7 @@ import {appInitialState, AppReducer, GameStatus} from './App.service';
 
 const GameContext = createContext({});
 
-const App = () => {
+const App = (): JSX.Element => {
 	const [{status}, dispatch] = useReducer(AppReducer, appInitialState);
 
 	return (

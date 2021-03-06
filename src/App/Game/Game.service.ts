@@ -1,4 +1,4 @@
-const calculateStatus = (winner: string | null, squares: Array<string>, nextValue: string) => {
+const calculateStatus = (winner: string | null, squares: Array<string>, nextValue: string): string => {
 	return winner
 		? `Winner: ${winner}`
 		: squares.every(Boolean)
@@ -6,13 +6,13 @@ const calculateStatus = (winner: string | null, squares: Array<string>, nextValu
 			: `Next player: ${nextValue}`
 }
 
-const calculateNextValue = (squares: Array<string>) => {
+const calculateNextValue = (squares: Array<string>): string => {
 	const xSquaresCount = squares.filter(r => r === 'X').length
 	const oSquaresCount = squares.filter(r => r === 'O').length
 	return oSquaresCount === xSquaresCount ? 'X' : 'O'
 }
 
-const calculateWinner = (squares: Array<string>) => {
+const calculateWinner = (squares: Array<string>): string | null => {
 	const lines = [
 		[0, 1, 2],
 		[3, 4, 5],

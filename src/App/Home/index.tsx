@@ -1,7 +1,7 @@
 import React from 'react';
 import RegistrationForm from './RegistrationForm';
 
-const Home = () => {
+const Home = (): JSX.Element => {
 
 	return (
 		<div className='home'>
