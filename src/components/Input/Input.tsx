@@ -1,21 +1,24 @@
 import React from 'react';
+import './Input.css'
 
-type InputType = {
+export type InputProps = {
   id: string,
   label: string,
   name: string,
   placeholder: string,
-  type: string,
-  args: Record<string, unknown>
+  type?: string,
+  helper?: string,
+  args?: Record<string, unknown>
 }
 
-const Input = ({id, label, name, placeholder, type, ...args}: InputType): JSX.Element => {
+export const Input = ({id, helper, label, name, placeholder, type, ...args}: InputProps): JSX.Element => {
 	return (
-		<label className="input-component" htmlFor={id}>
-			{label}
-			<input id={id} name={name} placeholder={placeholder} type={type ?? 'text'} {...args}/>
-		</label>
+		<div className='input-container'>
+			<label className="input-component" htmlFor={id}>
+				{label}
+				<input id={id} name={name} placeholder={placeholder} type={type ?? 'text'} {...args}/>
+			</label>
+			<p>{ helper }</p>
+		</div>
 	);
 };
-
-export default Input;
