@@ -9,6 +9,7 @@ Tic tac toe game, training to try to set up the practical crafts in a front-end 
 - Cypress (End to end testing)
 - Cucumber (Gherkin syntax for Behaviour driven development & Acceptance testing)
 - Jest (Unit testing when needed)
+- Storybook (Component testing)
 - Linters : ESLint & Prettier
 - Pre-commit checking with Husky (linting & tests)
 
